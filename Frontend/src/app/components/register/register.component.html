@@ -1,1 +1,81 @@
-<p>register works!</p>
+
+
+
+<div class="containter">
+
+    <div class="image"> Logo</div>
+    <div class="creatTxt"> Create your account </div>
+
+    <!--Registration box-->
+    <div class="regBox">
+
+
+        <!---->
+        <!--Name input box-->
+        <div class="name">
+            <div class="nameText">Name</div>
+            <div class="entName">
+                <input type="text" class="name" placeholder="">
+                <i class="bi bi-file-person"></i>
+             </div>
+        </div>
+
+        <!--Last name input box-->
+        <div class="lstName">
+            <div class="nameText">Last Name</div>
+            <div class="entLatnm">
+                <input type="text" class="name" placeholder="">
+                <i class="bi bi-file-person"></i>
+            </div>
+        </div>
+
+         <!--Email input box-->
+         <div class="emailBox">
+            <div class="nameText">Email</div>
+            <div class="entLatnm">
+                <input type="text" class="name" placeholder="">
+                <i class="bi bi-envelope"></i>
+            </div>
+         </div>
+
+         <!--Password input box-->
+         <div class="lstName">
+            <div class="nameText">Password</div>
+            <div class="entLatnm">
+                <input type="text" class="name" placeholder="">
+                <i class="bi bi-key"></i>
+             </div>
+         </div>
+
+         <!--Password input box-->
+         <div class="lstName">
+            <div class="nameText">Confirm Password </div>
+            <div class="entLatnm">
+                <input type="text" class="name" placeholder="">
+                <i class="bi bi-key"></i>
+            </div>
+         </div>
+
+    </div>
+
+
+    <form class="regForm" [FormGroup]="registrForm">
+
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName">
+      
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName">
+
+        <label for="last-name">Email: </label>
+        <input id="email" type="text" formControlName="email">
+
+        <label for="last-name">Password: </label>
+        <input id="Password" type="text" formControlName="Password">
+
+        <label for="last-name">Confirm password: </label>
+        <input id="Confirm-password" type="text" formControlName="Confirmpassword">
+      
+      </form>
+
+</div>

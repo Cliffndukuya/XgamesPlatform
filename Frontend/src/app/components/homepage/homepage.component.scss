@@ -1,0 +1,32 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+
+
+.container{
+    display: flex;
+    width: 100vw;
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.cart1{
+    //width: 100%;
+    display: flex;
+    //flex-direction: row;
+    padding-top: 1rem;
+    padding: auto;
+    margin: auto;
+    gap: 2rem; 
+    border-radius: 0.2rem;
+
+}
+
+.cart2{
+
+    padding-top: 1rem;
+}
