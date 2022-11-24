@@ -1,21 +1,28 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-const port = 5432
 
-app.use(bodyParser.json())
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-)
 
-app.get('/', (request, response) => {
-    response.json({ info: 'Node.js, Express, and Postgres API' })
-  })
+const express = require('express');
+var cors = require('cors');
+require("dotenv").config();
+const db = require("./config/db-config");
+const app = express();
 
-  app.listen(port, () => {
-    console.log(`App running on port ${port}.`)
-  })
+//impot classes
+const routes = require("./routes/routes");
 
-  
+var corsOptions = {
+    origin: "*"
+  };
+  //app.use(cors(corsOptions));
+
+
+//starting the servers
+// app.use(cors());
+app.use(express.json());
+app.use(cors(corsOptions));
+app.listen(process.env.SERVER_PORT,() => {console.log('Server running on port 8080');});
+
+if(db)
+{
+    console.log("Database is connected");
+}
+app.use('/api', routes)
