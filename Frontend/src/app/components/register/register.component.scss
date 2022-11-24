@@ -28,7 +28,14 @@ border-radius: 0.5rem;
   
 span{
     background-color: white;
-    
+    width: 5%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 6px 12px;
 }
 
   .btn-div{
@@ -54,3 +61,6 @@ span{
         color: #000000;
         font-weight: 700;
   }
+
+
+
