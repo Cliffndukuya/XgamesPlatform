@@ -1,3 +1,56 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 
+.card-body{
+    background-color: #CAC5C5;
+padding-bottom: 1rem;
+border-radius: 0.5rem;
+}
+
+
+.header {
+
+    padding: 5px;
+    border-radius: 5px 5px 0px 0px;    
+    & .header-div
+    {
+        margin: auto;
+        & p{
+            text-align:center ;
+            color: rgb(255, 255, 255);
+            font-size: larger;
+            font-weight: bold;
+            width: 100%;
+            align-items: center;
+        }
+    }
+  }
+  
+span{
+    background-color: white;
+    
+}
+
+  .btn-div{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 1rem;
+  }
+  .btn{
+   
+    width: 30%;
+    transition: 500ms;
+    color: white;
+    background-color: #000000;  
+
+  }
+  .btn:hover{
+        background-color: white;
+        border: 1px solid #2F2E41;
+        transform: scale(1.015);
+        color: #000000;
+        font-weight: 700;
+  }

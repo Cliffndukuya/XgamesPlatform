@@ -30,9 +30,12 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
               "src/styles.scss"
             ],
-            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "node_modules/jquery/dist/jquery.js"]
           },
           "configurations": {
             "production": {
@@ -100,9 +103,12 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
               "src/styles.scss"
             ],
-            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "node_modules/jquery/dist/jquery.js"]
           }
         }
       }
