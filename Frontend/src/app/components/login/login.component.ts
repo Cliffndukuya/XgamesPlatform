@@ -57,6 +57,7 @@ export class LoginComponent implements OnInit {
         
 
         const {user_email,user_name,user_lastname,account,user_id} = this.jwt.getData(data.token);
+        console.log(this.jwt.getData(data.token));
         localStorage.setItem('account', account);
         localStorage.setItem('user_email', user_email);
         localStorage.setItem('user_lastname',user_lastname);
