@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('user_name',user_name);
         localStorage.setItem('user_id',user_id);
 
-        if(account =="Admin") //route to relevent page
+        if(localStorage.getItem('account') =="Admin") //route to relevent page
         {
           this.toastr.success("Welcome Admin ");
           console.log("Welcome Admin");
