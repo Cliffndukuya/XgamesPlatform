@@ -38,9 +38,9 @@ export class RegisterComponent implements OnInit {
   {
     if(form.valid)
     {
-      
-      if(form.value.confirmPassword == form.value.password)
-      {
+     
+      //if(form.value.password  == form.value.confirmPassword)
+     //{
         
         this.subscriptions.push(
           this.authService.register(form.value).subscribe((response:any)=>{
@@ -51,9 +51,9 @@ export class RegisterComponent implements OnInit {
             console.log(error)
           })
         )
-       }else{
-         this.toastr.warning("Passwords do not match");
-       }
+      // }else{
+      //   this.toastr.warning("Passwords do not match");
+       //}
     }
   }
 

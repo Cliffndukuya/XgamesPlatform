@@ -34,7 +34,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserModule,
+    BrowserAnimationsModule,
     NgxSpinnerModule,
    ToastrModule.forRoot(),
     NgbModule,

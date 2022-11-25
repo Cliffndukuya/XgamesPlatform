@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   baseUrl : String = 'http://localhost:8080/api';
-  fullname = localStorage.getItem('name')+' '+localStorage.getItem('surname')
+  fullname = localStorage.getItem('user_name')+' '+localStorage.getItem('user_lastname')
 
 
 
