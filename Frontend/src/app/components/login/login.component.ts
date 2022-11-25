@@ -65,9 +65,10 @@ export class LoginComponent implements OnInit {
 
         if(account =="Admin") //route to relevent page
         {
-          this.toastr.success("Welcome Admin "+user_name);
+          this.toastr.success("Welcome Admin ");
+          console.log("Welcome Admin");
           this.router.navigateByUrl('/admin');
-        }else if(this.jwt.getData(data.token).account =="User") //route to relevent page
+        }else if(this.jwt.getData(data.token).account == "User") //route to relevent page
         {
           this.toastr.success("Welcome "+user_name);
           this.router.navigateByUrl('/user');

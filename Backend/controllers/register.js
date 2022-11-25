@@ -68,7 +68,7 @@ exports.login =  (req, res)=>{
                               user_name: results.rows[0].user_name,
                               user_lastname: results.rows[0].user_lastname,
                               password: results.rows[0].password,
-                              account: results.rows[0].account
+                              account: results.rows[0].account,
                              
                           },
                           process.env.SECRET_KEY,{
