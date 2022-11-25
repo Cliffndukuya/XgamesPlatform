@@ -36,7 +36,7 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     BrowserModule,
     NgxSpinnerModule,
-    ToastrModule.forRoot(),
+   ToastrModule.forRoot(),
     NgbModule,
     FormsModule,
     ReactiveFormsModule

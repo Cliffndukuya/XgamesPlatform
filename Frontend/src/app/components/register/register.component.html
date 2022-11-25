@@ -19,7 +19,7 @@
                 <div class="container-fluid mb-3 col-lg-8">
                   <label for="Name" class="form-label">First Name</label>
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Name" aria-describedby="addon-wrapping" formControlName="firstname" minlength="2" required>
+                    <input type="text" class="form-control" aria-label="Name" aria-describedby="addon-wrapping" formControlName="user_name" minlength="2" required>
                     <span><i class="bi bi-person-fill"></i></span> 
                   </div>
                 </div>
@@ -27,7 +27,7 @@
                 <div class="container-fluid mb-3 col-lg-8">
                   <label for="Surname" class="form-label">Last Name</label>
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control"aria-label="Surname" aria-describedby="addon-wrapping" formControlName="lastname" minlength="2" required><i class="bi bi-person-fill"></i>
+                    <input type="text" class="form-control"aria-label="user_lastname" aria-describedby="addon-wrapping" formControlName="user_lastname" minlength="2" required><i class="bi bi-person-fill"></i>
                    
                   </div>
                 </div>
@@ -36,7 +36,7 @@
                   <div class="container-fluid mb-3 col-lg-8">
                     <label for="Email" class="form-label">Email</label>
                     <div class="input-group mb-3">
-                      <input type="text" class="form-control" [email]="true" aria-label="Email" aria-describedby="addon-wrapping" formControlName="email" minlength="4" required>
+                      <input type="text" class="form-control" [email]="true" aria-label="Email" aria-describedby="addon-wrapping" formControlName="user_email" minlength="4" required>
                       <span><i class="bi bi-envelope-fill"></i></span> 
                     </div>
                   </div>
@@ -56,24 +56,30 @@
                       <span><i class="bi bi-key-fill"></i></span> 
                     </div>
                   </div>
-
+                  <div class="terms" >
+                      Agree to terms of use?
+                      <div class="form-check form-check-inline ">
+                        <input class="form-check-input" type="radio" name="account" formControlName="account" value="User" required >
+                        <label class="form-check-label label-center" for="account" style="align-content: center;">Yes</label>
+                      </div>
+                  </div>
             
-               
+                  <div class="btn-div container-fluid mb-3 col-lg-8">
+                    <button id="button" type="submit" [disabled]="registerForm.invalid" class="btn btn-med" >SignUp</button>
+                  </div>
+                  
+                    <div class="links">
+                      <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                      <p class="small fw-bold mt-2 pt-1 mb-0 text-center">Already have an account? <a href="" class="link" routerLink="/login" >SignIn</a></p>
+                    </div>
+                <!-- /form card register -->
             </form>
 
         
         <!--/card-block-->
     </div>
 
-    <div class="btn-div container-fluid mb-3 col-lg-8">
-        <button id="button" type="submit"  class="btn btn-med">SignUp</button>
-      </div>
-      
-        <div class="links">
-          <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
-          <p class="small fw-bold mt-2 pt-1 mb-0 text-center">Already have an account? <a href="" class="link" routerLink="/login" >SignIn</a></p>
-        </div>
-    <!-- /form card register -->
+
 
   <ngx-spinner type="ball-scale-multiple"></ngx-spinner> 
 

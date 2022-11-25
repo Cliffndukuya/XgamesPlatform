@@ -16,7 +16,7 @@ var smtpTransport = require('nodemailer-smtp-transport');
 
 exports.register = async (req, res)=>{ 
 
-  const { user_email , password ,user_name ,user_lastname } = req.body;
+  const { user_email , password ,user_name ,user_lastname, account } = req.body;
 
   const sql = 'SELECT * FROM users WHERE user_email = $1';
   db.query(sql,[user_email],(err, results)=>{
@@ -24,7 +24,7 @@ exports.register = async (req, res)=>{
       {
 
               db.query(
-                  'INSERT INTO users (user_email , password ,user_name ,user_lastname ) VALUES ($1,$2,$3,$4) RETURNING user_id ',[user_email,password ,user_name ,user_lastname],
+                  'INSERT INTO users (user_email , password ,user_name ,user_lastname,account ) VALUES ($1,$2,$3,$4,$5) RETURNING user_id ',[user_email,password ,user_name ,user_lastname,account],
                   (db_err,results) => {
                       if(db_err)
                       {
@@ -67,14 +67,15 @@ exports.login =  (req, res)=>{
                               user_email: results.rows[0].user_email,
                               user_name: results.rows[0].user_name,
                               user_lastname: results.rows[0].user_lastname,
-                              password: results.rows[0].password
+                              password: results.rows[0].password,
+                              account: results.rows[0].account
                              
                           },
                           process.env.SECRET_KEY,{
                               algorithm: 'HS256',
                               expiresIn: 120
                           });
-                          res.status(200).json({message: "Welcome! "+ results.rows[0].user_name, token:token,}); 
+                          res.status(200).json({message: "Welcome! " + results.rows[0].user_name, token:token,}); 
                  }
               //})
                

@@ -25,11 +25,12 @@ export class RegisterComponent implements OnInit {
   }
   private subscriptions : Subscription[] = [];
   registerForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-    confimPassword: new FormControl(''),
+    user_name: new FormControl('',[Validators.required,Validators.pattern('^[a-zA-Z ]*$')]),
+    user_lastname: new FormControl('',[Validators.required,Validators.pattern('^[a-zA-Z ]*$')]),
+    user_email: new FormControl(),
+    password: new FormControl(),
+    confimPassword: new FormControl(),
+  account: new FormControl(),
   });
  
 
@@ -37,22 +38,25 @@ export class RegisterComponent implements OnInit {
   {
     if(form.valid)
     {
+      
       if(form.value.confirmPassword == form.value.password)
       {
+        
         this.subscriptions.push(
           this.authService.register(form.value).subscribe((response:any)=>{
             this.router.navigateByUrl('/login');
-            this.toastr.success("Welcometo Dev.com "+form.value.name+"!");
+            this.toastr.success("Welcome to XGames "+form.value.firstname+"!");
           },(error:HttpErrorResponse)=>{
             this.toastr.error(JSON.stringify(error.error.message));
             console.log(error)
           })
         )
-      }else{
-        this.toastr.warning("Passwords do not match");
-      }
+       }else{
+         this.toastr.warning("Passwords do not match");
+       }
     }
   }
 
 
 }
+
