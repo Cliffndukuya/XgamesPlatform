@@ -26,8 +26,8 @@ export class UserService {
 
 //   }
 
-//   getInProgressPosts(){
-//     return this.http.get(this.baseUrl+'/getInProgress/'+localStorage.getItem('user_id'))
+  getInProgressPosts(){
+    return this.http.get(this.baseUrl+'/getInProgress/'+localStorage.getItem('user_id'))}
 
 
 
