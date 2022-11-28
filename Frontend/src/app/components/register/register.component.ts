@@ -51,12 +51,10 @@ export class RegisterComponent implements OnInit {
             console.log(error)
           })
         )
-       }
-      //  else if(form.value.password  !== form.value.confirmPassword )
-      //  {
+      //  }else{
       //    this.toastr.warning("Passwords do not match");
       //  }
-   // }
+    }
   }
 
 
