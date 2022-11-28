@@ -64,12 +64,13 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('user_name',user_name);
         localStorage.setItem('user_id',user_id);
 
-        if(localStorage.getItem('account') =="Admin") //route to relevent page
+        if(localStorage.getItem('account')=="Admin") //route to relevent page
         {
           this.toastr.success("Welcome Admin ");
           console.log("Welcome Admin");
           this.router.navigateByUrl('/admin');
-        }else if(this.jwt.getData(data.token).account == "User") //route to relevent page
+        }
+        else if(this.jwt.getData(data.token).account =="User") //route to relevent page
         {
           this.toastr.success("Welcome "+user_name);
           this.router.navigateByUrl('/user');
