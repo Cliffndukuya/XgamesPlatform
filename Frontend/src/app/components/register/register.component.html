@@ -20,14 +20,15 @@
                   <label for="Name" class="form-label">First Name</label>
                   <div class="input-group mb-3">
                     <input type="text" class="form-control" aria-label="Name" aria-describedby="addon-wrapping" formControlName="user_name" minlength="2" required>
-                    <span><i class="bi bi-person-fill"></i></span> 
+                    <div class="iconss">  <i class="bi bi-person-fill"></i> </div>
                   </div>
                 </div>
 
                 <div class="container-fluid mb-3 col-lg-8">
                   <label for="Surname" class="form-label">Last Name</label>
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control"aria-label="user_lastname" aria-describedby="addon-wrapping" formControlName="user_lastname" minlength="2" required><i class="bi bi-person-fill"></i>
+                    <input type="text" class="form-control"aria-label="user_lastname" aria-describedby="addon-wrapping" formControlName="user_lastname" minlength="2" required>
+                    <div class="iconss"> <i class="bi bi-person-fill"></i> </div>
                    
                   </div>
                 </div>
@@ -37,7 +38,7 @@
                     <label for="Email" class="form-label">Email</label>
                     <div class="input-group mb-3">
                       <input type="text" class="form-control" [email]="true" aria-label="Email" aria-describedby="addon-wrapping" formControlName="user_email" minlength="4" required>
-                      <span><i class="bi bi-envelope-fill"></i></span> 
+                      <div class="iconss"><i class="bi bi-envelope-fill"></i> </div> 
                     </div>
                   </div>
 
@@ -45,7 +46,7 @@
                     <label for="Password" class="form-label">Password</label>
                     <div class="input-group mb-3">
                       <input type="password" class="form-control" aria-label="Password" aria-describedby="addon-wrapping" formControlName="password" minlength="4" required>
-                      <span><i class="bi bi-key-fill"></i></span> 
+                      <div class="iconss"> <i class="bi bi-key-fill"></i></div>
                     </div>
                   </div>
 
@@ -53,7 +54,7 @@
                     <label for="ConfirmPassword" class="form-label">Confirm Password</label>
                     <div class="input-group mb-3">
                       <input type="password" class="form-control" aria-label="ConfirmPassword" aria-describedby="addon-wrapping" formControlName="confimPassword" minlength="4" required>
-                      <span><i class="bi bi-key-fill"></i></span> 
+                      <div class="iconss">  <i class="bi bi-key-fill"></i> </div>
                     </div>
                   </div>
                   <div class="terms" >
