@@ -30,7 +30,9 @@ width: 3rem; height: 3rem;
     //width: 100%;
     display: flex;
     margin-top: 2rem;
-
+    background-color: #CAC5C5;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 background-color: #CAC5C5;
     gap: 1rem; 
     border-radius: 0.35rem;
@@ -43,6 +45,7 @@ background-color: #CAC5C5;
 .cart2{
     background-color: #CAC5C5;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     border-radius: 0.35rem;
 
 }
@@ -60,11 +63,14 @@ background-color: #CAC5C5;
 
 }
 }
-.line{
+
+hr{
     width: 100%;
     margin: auto;
    // margin-top: 5%;
     //margin-bottom: 5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border-color: rgb(0, 0, 0);
 }
 
