@@ -1,0 +1,39 @@
+
+.container{
+
+justify-items: center;
+
+}
+
+hr{
+    width: 100%;
+    margin: auto;
+   margin-top: 2rem;
+    //margin-bottom: 5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-color: rgba(228, 228, 228, 0.86);
+}
+
+.line{
+    width: 100%;
+    margin: auto;
+   margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-color: #545F66;
+}
+
+.card{
+    background-color: #545F66;
+    color: white;
+    width: auto;
+}
+
+.odas{
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #4d5f6b;
+}
+}
+
