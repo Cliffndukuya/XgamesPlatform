@@ -3,16 +3,21 @@
 button{
     background-color: black;
     color: white;
+    i{
+      color: white;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+.container-fluid{
+  background-color: #CAC5C5;
+}
 .navbar
 {
-    
-    padding: .6rem 0;
-    border-radius: 8px;
-    
+
+
+    background-color: #CAC5C5;
     & .text
     {
         font-family: 'Poppins';
@@ -30,9 +35,9 @@ button{
 .logout-btn
 {
     background-color: #B42B6C;
-    color: white; 
+    color: white;
     transition: 300ms;
-    
+
     &:hover
     {
         transform: scale(1.03);
@@ -42,7 +47,7 @@ button{
 .btn-secondary
 {
     transition: 300ms;
-    
+
     &:hover
     {
         transform: scale(1.03);
@@ -60,8 +65,8 @@ button{
 
 }
 
-@media (min-width: 375px) and (max-width : 992px){ 
+@media (min-width: 375px) and (max-width : 992px){
     .profile-image{
         display: none;
-    } 
+    }
 }
