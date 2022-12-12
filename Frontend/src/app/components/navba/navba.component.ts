@@ -54,8 +54,8 @@ export class NavbaComponent implements OnInit {
   
     if(localStorage.getItem('name')!= null)
     {
-      this.name = "Hello "+localStorage.getItem('name');
-      this.image = localStorage.getItem('image_link'); 
+      // this.name = "Hello "+localStorage.getItem('name');
+      // this.image = localStorage.getItem('image_link'); 
     }
   }
 

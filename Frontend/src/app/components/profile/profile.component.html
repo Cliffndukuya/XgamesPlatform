@@ -1,4 +1,4 @@
-
+<app-navba></app-navba>
 <div class="container-fluid">
 Profile Update
 
@@ -70,15 +70,15 @@ Profile Update
 
           <div class="container-fluid mb-3 col-lg-8">
             <label for="city" class="form-label">City</label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" [email]="true" aria-label="city" aria-describedby="addon-wrapping" formControlName="city" minlength="6" required>
+            <div class="input" style="display: flex;">
+              <input type="text" class="form-control"  style="width: 8.5rem; display:flex;" aria-label="city" aria-describedby="addon-wrapping" formControlName="city" minlength="6" required>
             </div>
           </div>
 
           <div class="container-fluid mb-3 col-lg-8">
             <label for="zipCode" class="form-label">Zip Code</label>
             <div class="input" style="display: flex;">
-              <input type="number" class="form-control" aria-label="zipCode" style="width: 15px; display:flex;" aria-describedby="addon-wrapping" formControlName="zipCode" minlength="4" required>
+              <input type="number" class="form-control" aria-label="zipCode" style="width: 5rem; display:flex;" aria-describedby="addon-wrapping" formControlName="zipCode" minlength="4" required>
             </div>
           </div>
 
@@ -99,3 +99,5 @@ Profile Update
 
 
 </div>
+
+<app-foot></app-foot>
