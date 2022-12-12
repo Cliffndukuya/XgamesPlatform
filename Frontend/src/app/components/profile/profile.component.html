@@ -2,9 +2,100 @@
 <div class="container-fluid">
 Profile Update
 
-    <div class="personal">
-        Personal Information
+   <!-- form card Register -->
+   <div class="card-body">
+  
+    <form class="personalForm" id="formRegister" [formGroup]="pInfoForm" > 
+        <div class="formTitle">  Personal Information  </div>  
+      <hr>
+        <div class="container-fluid mb-3 col-lg-8">
+            <label for="Surname" class="form-label">First Name</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Name" aria-describedby="addon-wrapping" formControlName="user_name" minlength="2" required>
+          </div>
+        </div>
+
+        <div class="container-fluid mb-3 col-lg-8">
+          <label for="Surname" class="form-label">Last Name</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control"aria-label="user_lastname" aria-describedby="addon-wrapping" formControlName="user_lastname" minlength="2" required>
+          </div>
+        </div>
         
-    </div>
+
+          <div class="container-fluid mb-3 col-lg-8">
+            <label for="Password" class="form-label">Password</label>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" aria-label="Password" aria-describedby="addon-wrapping" formControlName="password" minlength="4" required>
+            </div>
+          </div>
+
+          <div class="container-fluid mb-3 col-lg-8">
+            <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" aria-label="ConfirmPassword" aria-describedby="addon-wrapping" formControlName="confimPassword" minlength="4" required>
+            </div>
+          </div>
+
+          <div class="btn-div container-fluid mb-3 col-lg-8">
+            <button id="button" type="submit" [disabled]="pInfoForm.invalid" class="btn btn-med" >Submit</button>
+          </div>
+
+        <!-- /form card register -->
+    </form>
+
+<!--/card-block-->
+</div>
+
+
+<div class="card-body">
+  
+    <form class="shippingForm" id="formRegister" [formGroup]="pInfoForm" >    
+        <div class="formTitle">  Shipping Address </div> 
+        <hr>
+        <div class="container-fluid mb-3 col-lg-8">
+            <label for="address1" class="form-label">Address Line 1</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Address Line 1" aria-describedby="addon-wrapping" formControlName="address1" required>
+          </div>
+        </div>
+
+        <div class="container-fluid mb-3 col-lg-8">
+            <label for="address2" class="form-label">Address Line 2</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Address Line 2" aria-describedby="addon-wrapping" formControlName="address2"  required>
+          </div>
+        </div>
+        
+
+          <div class="container-fluid mb-3 col-lg-8">
+            <label for="city" class="form-label">City</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" [email]="true" aria-label="city" aria-describedby="addon-wrapping" formControlName="city" minlength="6" required>
+            </div>
+          </div>
+
+          <div class="container-fluid mb-3 col-lg-8">
+            <label for="zipCode" class="form-label">Zip Code</label>
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" aria-label="zipCode" style="width: 20px;" aria-describedby="addon-wrapping" formControlName="zipCode" minlength="4" required>
+            </div>
+          </div>
+
+         
+    
+          <div class="btn-div container-fluid mb-3 col-lg-8">
+            <button id="button" type="submit" [disabled]="pInfoForm.invalid" class="btn btn-med" >Submit</button>
+          </div>
+          
+  
+        <!-- /form card register -->
+    </form>
+
+<!--/card-block-->
+</div>
+
+
+
 
 </div>
