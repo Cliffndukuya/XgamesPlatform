@@ -3,7 +3,8 @@
 
 .card-body{
     background-color: #CAC5C5;
-padding-bottom: 1rem;
+padding-top: 1rem;
+margin-bottom: 2rem;
 border-radius: 0.5rem;
 }
 
@@ -11,7 +12,7 @@ border-radius: 0.5rem;
 .header {
 
     padding: 5px;
-    border-radius: 5px 5px 0px 0px;    
+    border-radius: 5px 5px 0px 0px;
     & .header-div
     {
         margin: auto;
@@ -25,7 +26,7 @@ border-radius: 0.5rem;
         }
     }
   }
-  
+
 span{
     background-color: white;
     width: 5%;
@@ -47,11 +48,11 @@ span{
     padding-top: 1rem;
   }
   .btn{
-   
+
     width: 30%;
     transition: 500ms;
     color: white;
-    background-color: #000000;  
+    background-color: #000000;
 
   }
   .btn:hover{
@@ -69,4 +70,7 @@ span{
   border-radius: 0.5rem;
   border-color: black;
 }
-
+.terms{
+  display: flex;
+  justify-content: center;
+}
