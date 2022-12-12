@@ -16,6 +16,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CommonModule } from '@angular/common';
+import { CartComponent } from './components/cart/cart.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { CommonModule } from '@angular/common';
     UserHomeComponent,
     AdminHomeComponent,
     NavbaComponent,
-    FootComponent
+    FootComponent,
+    CartComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
