@@ -88,3 +88,37 @@ exports.login =  (req, res)=>{
 
   })  
 }
+
+exports.getOneUser = (req, res) => {
+
+    const user_id = req.params.user_id;
+    //console.log(user_id);
+
+    const sql = 'SELECT * FROM users WHERE user_id = $1';
+    db.query(sql,[user_id],(err, results)=>{
+        if(err) {
+            //console.log(err)
+             res.status(400).json({message:'Query failed'}) }else{
+            res.status(200).json(results.rows[0]);
+        }
+    })
+}
+
+
+exports.updateUser = async (req, res)=>{
+   
+    const user_id = req.params.user_id;
+    const { password ,name ,surname} = req.body;
+  
+    db.query(
+      'UPDATE users SET password = $1 ,name = $2, surname = $3  WHERE user_id = $4',
+        [password ,name ,surname , user_id],
+       (error,results) => {
+        if (error) {
+            res.status(400).json({message:'Query failed'});
+        }else {res.status(200).json({message:'Your profile was updated successfully'});}
+    
+      })
+}
+
+
