@@ -1,0 +1,43 @@
+
+
+
+.container-fluid {
+
+width: 90%;
+
+}
+
+.personalForm{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background-color: #CAC5C5;
+}
+.shippingForm{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background-color: #CAC5C5;
+}
+.formTitle{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+hr{
+        width: 100%;
+        border-color: rgb(0, 0, 0);
+ }
+
+
