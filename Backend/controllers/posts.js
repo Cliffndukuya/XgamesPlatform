@@ -11,18 +11,18 @@ const db = new Pool({
 
 exports.addPost = async (req, res)=>{
 
-    const {title,  description, image,price  } = req.body;
+    const {title,  desc, image,price  } = req.body;
 
 
     //console.log(req.body)
     
-    const sql = 'INSERT INTO posts ( post_title, post_desc, post_image, hidden,post_price,) VALUES ($1,$2,$3,$4,$5) RETURNING post_id';
+    const sql = 'INSERT INTO posts ( post_title, post_desc, post_image,post_price, hidden) VALUES ($1,$2,$3,$4,$5) RETURNING post_id';
  
-    db.query(sql,[title , description ,image, false,price],(err,results)=>{
+    db.query(sql,[title , desc ,image,price, false],(err,results)=>{
         if(err)
         {
-            
-            res.status(400).json({message:'Query failed'});
+            console.log(err);
+           res.status(400).json({message:'Query failed'});
         }else
         {
             console.log(req.body)
@@ -37,7 +37,7 @@ exports.addPost = async (req, res)=>{
 exports.getPosts = async (req, res)=>{
 
     const sql = 'SELECT * FROM posts WHERE hidden = $1  ';
-    db.query(sql,[false,0],(error,results)=>{
+    db.query(sql,[false],(error,results)=>{
         if(error)
         {
             //console.log(error)
@@ -59,10 +59,10 @@ exports.getPosts = async (req, res)=>{
 
 
 exports.getOnePost = async (req, res)=>{
-    const user_id = req.params.user_id;
 
-    const sql = 'SELECT * FROM posts WHERE user_id = $1';
-    db.query(sql,[user_id],(error,results)=>{
+
+    const sql = 'SELECT * FROM posts WHERE post_id = $1';
+    db.query(sql,(error,results)=>{
         if(error)
         {
             res.status(400).json({message:'Query failed'});

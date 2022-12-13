@@ -7,6 +7,7 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CartComponent } from './components/cart/cart.component';
+import { StocksComponent } from './components/stocks/stocks.component';
 
 const routes: Routes = [
 
@@ -18,7 +19,7 @@ const routes: Routes = [
 {path: 'register', component: RegisterComponent},
 {path: 'profile', component: ProfileComponent},
 {path: 'cart', component: CartComponent},
-
+{path: 'stocks', component: StocksComponent},
 
 ];
 

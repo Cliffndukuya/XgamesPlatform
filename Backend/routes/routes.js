@@ -16,7 +16,9 @@ router.post('/register',register.register);
 
 router.post('/addPost',posts.addPost);
 
+router.get('/getPosts',posts.getPosts);
 
+router.get('/getOnePost',posts.getOnePost);
 
 
 

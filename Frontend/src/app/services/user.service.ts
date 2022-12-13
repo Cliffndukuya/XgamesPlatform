@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
+
   baseUrl : String = 'http://localhost:8080/api';
   fullname = localStorage.getItem('user_name')+' '+localStorage.getItem('user_lastname')
 
@@ -13,18 +14,22 @@ export class UserService {
 
   constructor(private http :HttpClient) { }
 
-//   createPost(data: any) {
-//     return this.http.post(this.baseUrl+'/addPost/'+localStorage.getItem('user_id'),data);
-//   }
+  createPost(data: any) {
+    return this.http.post(this.baseUrl+'/addPost',data);
+  }
 
-//   getPosts() {
-//     return this.http.get(this.baseUrl+'/getPosts');
-//   }
+  getPosts() {
+    return this.http.get(this.baseUrl+'/getPosts');
+  }
 
-//   getCompletedPosts(){
-//     return this.http.get(this.baseUrl+'/getCompleted/'+localStorage.getItem('user_id'))
+  getOnePost(){
+    return this.http.get(this.baseUrl+'/getOnePost');
+  }
 
-//   }
+  getCompletedPosts(){
+    return this.http.get(this.baseUrl+'/getCompleted/'+localStorage.getItem('user_id'))
+
+  }
 
   getInProgressPosts(){
     return this.http.get(this.baseUrl+'/getInProgress/'+localStorage.getItem('user_id'))}
