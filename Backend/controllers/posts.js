@@ -11,14 +11,14 @@ const db = new Pool({
 
 exports.addPost = async (req, res)=>{
 
-    const {title,  desc, image,price  } = req.body;
+    const {title,  desc, image,price, quantity  } = req.body;
 
 
     //console.log(req.body)
     
-    const sql = 'INSERT INTO posts ( post_title, post_desc, post_image,post_price, hidden) VALUES ($1,$2,$3,$4,$5) RETURNING post_id';
+    const sql = 'INSERT INTO posts ( post_title, post_desc, post_image,post_price,hidden, post_quantity, buy) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING post_id';
  
-    db.query(sql,[title , desc ,image,price, false],(err,results)=>{
+    db.query(sql,[title , desc ,image,price, false, quantity, 0],(err,results)=>{
         if(err)
         {
             console.log(err);

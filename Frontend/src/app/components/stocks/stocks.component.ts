@@ -18,11 +18,13 @@ export class StocksComponent implements OnInit {
   constructor(private userService : UserService, private auth :AuthService,private toastr: ToastrService, private router:Router) { }
 
   posts: any;
-  id : any;
+  id:any;
   postId : any;
   postTitle:any;
   postDesc:any;
   postPrice:any;
+  postimg:any;
+  leftgm:any;
   
   isLoggedIn : boolean = false;
   ngOnInit(): void {
@@ -33,19 +35,22 @@ export class StocksComponent implements OnInit {
 
   refresh()
   {
-    if(localStorage.getItem('token')!=null)
-    {
-      this.isLoggedIn = true;
-      localStorage.setItem('isLoggedIn','yes');
-    }
+    this.userService.getPosts().subscribe((data: any) => {
+      this.posts = data;
+      console.log(this.posts)
+    },(err : HttpErrorResponse) =>{
+
+    })
+    
     
   }
   
   addForm= new FormGroup({
     title: new FormControl(),
     price: new FormControl(),
-    description: new FormControl(),
+    desc: new FormControl(),
     image: new FormControl(),
+    quantity: new FormControl(),
   });
 
   onSubmit(form: FormGroup) {
@@ -64,6 +69,30 @@ export class StocksComponent implements OnInit {
     this.addForm.reset();
   }
 
+
+  setDetails(id:any,post_title:any,post_desc:any,post_price:any){
+    this.postId = id;
+    this.postTitle = post_title;
+    this.postDesc = post_desc;
+    this.postPrice = post_price;
+  }
+
+
+
+data ={
+status: '',
+post_id: ''
+}
+
+
+  getPosts(postTitle:any,   postId : any, postPrice:any,  postimg:any, leftgm:any){
+
+    localStorage.setItem('post_title', postTitle),
+    localStorage.setItem('post_price', postPrice),
+    localStorage.setItem('post_image', postimg),
+    localStorage.setItem('post_id', postId),
+    localStorage.setItem('post_quantity',leftgm)
+  }
 
 
 }

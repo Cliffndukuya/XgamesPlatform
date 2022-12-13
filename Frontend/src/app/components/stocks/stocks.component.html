@@ -53,8 +53,8 @@
                           <textarea name="postDescription"
                            id="postDescription" 
                            class="form-control"
-                           formControlName="description"
-                           cols="10" rows="10" minlength="10" required > </textarea>
+                           formControlName="desc"
+                           cols="30" rows="10" minlength="10" required > </textarea>
                       </div>
       
               </div>
@@ -68,7 +68,17 @@
                         formControlName="image">
 
                     </div>  
-                
+
+                    <div class="quantity">
+           
+                        Quantity
+                            <div class="quant"> <input type="number"
+                                class="form-control"
+                                id="quantity"
+                                formControlName="quantity">
+        
+                            </div> 
+                    </div>
             </div>
       
       
@@ -84,17 +94,23 @@
   </div>
   
 
-<div class="stocklf">
-
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="stocklf" row row-cols-1 row-cols-md-3 g-4 *ngFor=" let post of posts">
+        <div class="col" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <div class="card" style="width: 18rem;">
+            <img src="{{post.post_image}}" class="card-img-top" >
+            <div class="card-body">
+                
+            {{post.post_title}}
+            {{post.post_price}}
+            {{post.quantity}}
+            </div>
+            <div class="card-footer">
+            Quantity: {{post.post_quantity}}
+            </div>
         </div>
-      </div>
+        </div>
 
-
-</div>
+    </div>
    
        
 </div>
