@@ -2,6 +2,7 @@
 
 const express = require('express');
 const register = require('../controllers/register')
+const posts = require('../controllers/posts')
 
 
 
@@ -13,7 +14,7 @@ router.post('/login',register.login);
 
 router.post('/register',register.register);
 
-
+router.post('/addPost',posts.addPost);
 
 
 

@@ -34,13 +34,15 @@ export class NavbaComponent implements OnInit {
 
       this.dashboardRoute = '/admin';
       return true;
-    }else
+    }
+    else
     {
       this.dashboardRoute = '/user';
       return false;
     }
     
   }
+
   logout()
   {
     localStorage.clear();

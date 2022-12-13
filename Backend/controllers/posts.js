@@ -10,22 +10,23 @@ const db = new Pool({
 
 
 exports.addPost = async (req, res)=>{
-    const user_id = req.params.user_id;
-    const {title, price , description } = req.body;
-    //const freelancer = req.params.freelancer;
+
+    const {title,  description, image,price  } = req.body;
+
 
     //console.log(req.body)
     
-    const sql = 'INSERT INTO posts (post_price, post_title, post_desc, user_id, hidden,status) VALUES ($1,$2,$3,$4,$5,$6) RETURNING post_id';
+    const sql = 'INSERT INTO posts ( post_title, post_desc, post_image, hidden,post_price,) VALUES ($1,$2,$3,$4,$5) RETURNING post_id';
  
-    db.query(sql,[price,title , description , user_id, false,0],(err,results)=>{
+    db.query(sql,[title , description ,image, false,price],(err,results)=>{
         if(err)
         {
             
             res.status(400).json({message:'Query failed'});
         }else
         {
-            res.status(200).json({message: 'Your post was successfully added '});
+            console.log(req.body)
+            res.status(200).json({message: 'Product was successfully added '});
         }
 
     });
@@ -35,7 +36,7 @@ exports.addPost = async (req, res)=>{
 
 exports.getPosts = async (req, res)=>{
 
-    const sql = 'SELECT * FROM posts WHERE hidden = $1  and status = $2';
+    const sql = 'SELECT * FROM posts WHERE hidden = $1  ';
     db.query(sql,[false,0],(error,results)=>{
         if(error)
         {
@@ -51,46 +52,11 @@ exports.getPosts = async (req, res)=>{
     
 }
 
-exports.getCompleted = async (req, res)=>{
-    
-    completed = 100;
-    const sql = 'SELECT * FROM posts WHERE status = $1 and (user_id = $2 or dev_id = $3)';
-    db.query(sql,[completed,req.params.user_id,req.params.user_id],(error,results)=>{
-        if(error)
-        {
-            res.status(400).json({message:'Query failed'});
-        }else{
-            
-
-            res.status(200).json(results.rows);
-
-        }
-
-    })
-    
-}
 
 
 
 
-exports.getPostStatus = async (req, res)=>{
 
-    const post_id = req.params.post_id;
-
-    const sql = 'SELECT * FROM posts WHERE post_id = $1';
-    db.query(sql,[post_id],(error,results)=>{
-        if(error)
-        {
-            res.status(400).json({message:'Query failed'});
-        }else{
-
-            res.status(200).json(results.rows);
-
-        }
-
-    })
-
-}
 
 exports.getOnePost = async (req, res)=>{
     const user_id = req.params.user_id;
