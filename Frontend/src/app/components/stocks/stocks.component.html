@@ -94,15 +94,14 @@
   </div>
   
 
-    <div class="stocklf" row row-cols-1 row-cols-md-3 g-4 *ngFor=" let post of posts">
+    <!-- <div class="stocklf" row row-cols-1 row-cols-md-3 g-4 *ngFor=" let post of posts">
         <div class="col" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 20rem;" >
             <img src="{{post.post_image}}" class="card-img-top" >
             <div class="card-body">
                 
             {{post.post_title}}
             {{post.post_price}}
-            {{post.quantity}}
             </div>
             <div class="card-footer">
             Quantity: {{post.post_quantity}}
@@ -110,6 +109,27 @@
         </div>
         </div>
 
+    </div> -->
+
+
+    <div class="stox">
+        <div class="row row-cols-2 row-cols-md-3 g-4">
+            <div class="col" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <div class="card" style="width: 20rem; justify-content: space-between; margin-top: 2rem;" *ngFor=" let post of posts" >
+                <div class="card-header">
+                    {{post.post_title}}
+                </div>
+                <div class="card-body">               
+                <img src="{{post.post_image}}" class="card-img-top" alt="...">      
+                </div>  
+                <div class="card-footer">
+                    Quantity: {{post.post_quantity}} <br>
+                    {{post.post_price}}
+                </div>        
+              </div>
+            </div>
+            
+        </div>
     </div>
    
        
