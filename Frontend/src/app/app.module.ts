@@ -18,6 +18,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { CommonModule } from '@angular/common';
 import { CartComponent } from './components/cart/cart.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { StocksComponent } from './components/stocks/stocks.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     NavbaComponent,
     FootComponent,
     CartComponent,
-    ProfileComponent
+    ProfileComponent,
+    StocksComponent
   ],
   imports: [
     CommonModule,
