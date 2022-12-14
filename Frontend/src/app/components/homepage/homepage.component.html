@@ -1,17 +1,25 @@
 
 
 <div class="container-fluid">
-<div class="welLogo">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/X_Games_logo.svg/1200px-X_Games_logo.svg.png">
-</div>
+    <div class="welLogo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/X_Games_logo.svg/1200px-X_Games_logo.svg.png" >
+    </div>
 
     <div class="cart1">
 
-        <div class="welcomeDisc">
-         Buy online
-        Delivery <br>
-        or
-        Pickup Instore
+        <div class="welcomeDisc"style="display: flex;">
+            <div class="shopin" > 
+                <div class="shpic"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/2273/2273100.png" style="height: 8rem;width:8rem;">
+                </div>
+  
+                 <div>
+                Buy online
+                Delivery <br>
+                or
+                Pickup Instore
+                 </div>
+             </div>
         </div>
         <div class="shpnw">
             <button class="btn btn-dark btn-sm " href=" " role="button" routerLink="/login">Shop Now</button>
@@ -22,18 +30,51 @@
     <hr class="line">
 
     <!--Promotions cart-->
-    <div class="cart2">
-        <div class="promo">
-            <div class="txt"> Promotion</div>
-            <div class="promoBut">
-                <button class="left"> < </button>
-                <button class="right"> > </button>
-            </div>
+    <div class="cart2" >
+        <div class="promo" style="margin-bottom: 1rem;">
+            <div class="txt" style="color: rgb(0, 0, 0); "> Promotions</div>
+              <div class="promoBut">
+                <button class="left" style="border-radius: 0.8rem; background-color:inherit"> < </button>
+                <button class="right" style="border-radius: 0.8rem; background-color:inherit"> > </button>
+                <br>
+             </div>
+        </div>
+        <div class="crd" >
+            <div class="card-group">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card"routerLink="/login" routerLinkActive="active">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/46b63d3c-ae67-464c-9a37-670829b2a157/da5qdky-7725ec61-a0c6-4bf4-90f9-f23314197ac3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ2YjYzZDNjLWFlNjctNDY0Yy05YTM3LTY3MDgyOWIyYTE1N1wvZGE1cWRreS03NzI1ZWM2MS1hMGM2LTRiZjQtOTBmOS1mMjMzMTQxOTdhYzMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.R5trLcEPW4XCUsgC2-3jYRsOMeJe0Op1Yq3Bq4jri6I" class="card-img-top" alt="...">
+                 
+                        <div class="card-body">
+                          <h5 class="card-title">Ghost Recon Wildlands</h5>
+                          <p class="card-text">R399</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" routerLink="/login" routerLinkActive="active">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/46b63d3c-ae67-464c-9a37-670829b2a157/d9udik2-7e97658c-6bac-4854-b5c4-83c529ee6877.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ2YjYzZDNjLWFlNjctNDY0Yy05YTM3LTY3MDgyOWIyYTE1N1wvZDl1ZGlrMi03ZTk3NjU4Yy02YmFjLTQ4NTQtYjVjNC04M2M1MjllZTY4NzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.TCiubfoE8MBTdsL21O5izdcyw00HDW5g0_NdejtOsv4" class="card-img-top" alt="...">
+                             <div class="card-body">
+                          <h5 class="card-title">The Division</h5>
+                          <p class="card-text">R319.99 </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" routerLink="/login" routerLinkActive="active">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8f8830f0-679a-4974-977c-bd5802617c82/db9n6dw-3c1d14c7-5f52-4318-a1d6-bf244a5cc712.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhmODgzMGYwLTY3OWEtNDk3NC05NzdjLWJkNTgwMjYxN2M4MlwvZGI5bjZkdy0zYzFkMTRjNy01ZjUyLTQzMTgtYTFkNi1iZjI0NGE1Y2M3MTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5BkuQ0fB500n_mRqEXzVwKzIfwll2sHzeoazm2T2Wqw" class="card-img-top" alt="...">
+                         <div class="card-body">
+                          <h5 class="card-title">Pay Day 2</h5>
+                          <p class="card-text">R299.99</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
         </div>
     </div>
-    <hr class="line">
+
     <!--Latest releases cart-->
-    <div class="cart3">
 
     </div>
     <hr class="line">
@@ -42,6 +83,7 @@
         <a class="btn btn-dark btn-sm " href="#" role="button" routerLink="/login">SignIn</a>
         <a class="btn btn-dark btn-sm " href="#" role="button" routerLink="/register">SignUp</a>
     </div>
+
 
 
 </div>

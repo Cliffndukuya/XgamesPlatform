@@ -8,7 +8,7 @@ export class UserService {
 
 
   baseUrl : String = 'http://localhost:8080/api';
-  fullname = localStorage.getItem('user_name')+' '+localStorage.getItem('user_lastname')
+  //fullname = localStorage.getItem('user_name')+' '+localStorage.getItem('user_lastname')
 
 
 
@@ -23,7 +23,13 @@ export class UserService {
   }
 
   getOnePost(){
-    return this.http.get(this.baseUrl+'/getOnePost');
+    return this.http.get(this.baseUrl+'/getOnePost'+localStorage.getItem('post_id'));
+  }
+
+  updateProfile(user_id:any ,form:any)
+  {
+    return this.http.patch(this.baseUrl+'/updateUser'+user_id,form);
+
   }
 
   getCompletedPosts(){

@@ -5,20 +5,20 @@ Profile Update
    <!-- form card Register -->
    <div class="card-body">
   
-    <form class="personalForm" id="formRegister" [formGroup]="pInfoForm" > 
+    <form class="personalForm"  id="formRegister" [formGroup]="pInfoForm"  (ngSubmit)="onUpdate(pInfoForm)"> 
         <div class="formTitle">  Personal Information  </div>  
       <hr>
         <div class="container-fluid mb-3 col-lg-8">
             <label for="Surname" class="form-label">First Name</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Name" aria-describedby="addon-wrapping" formControlName="user_name" minlength="2" required>
+            <input type="text" class="form-control" aria-label="Name" placeholder="{{name}}" aria-describedby="addon-wrapping" formControlName="user_name" minlength="2" required>
           </div>
         </div>
 
         <div class="container-fluid mb-3 col-lg-8">
           <label for="Surname" class="form-label">Last Name</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control"aria-label="user_lastname" aria-describedby="addon-wrapping" formControlName="user_lastname" minlength="2" required>
+            <input type="text" class="form-control"aria-label="user_lastname" placeholder="{{lastname}}" aria-describedby="addon-wrapping" formControlName="user_lastname" minlength="2" required>
           </div>
         </div>
         

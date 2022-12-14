@@ -3,30 +3,41 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <!-- <a class="navbar-brand" [routerLink]=dashboardRoute href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_X_Games.jpg" style="width: 3rem; height: 3rem;">
+      </a>  -->
       <button class="navbar-toggler" type="button" (click)="ngOnInit()" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <i class="bi bi-list"></i> 
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]=dashboardRoute routerLinkActive="active" href='#'>Dashboard</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/profile" routerLinkActive="active" href='#'>Edit Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/profile" routerLinkActive="active" href='#'>Playstation</a>
+            <a class="nav-link" routerLink="/profile" [hidden]="checkAccount()" routerLinkActive="active" href='#'>Playstation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/profile" routerLinkActive="active" href='#'>Xbox</a>
+            <a class="nav-link" routerLink="/profile" [hidden]="checkAccount()"routerLinkActive="active" href='#'>Xbox</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/cart" routerLinkActive="active" href='#'>Cart</a>
+            <a class="nav-link" routerLink="/cart" [hidden]="checkAccount()" routerLinkActive="active" href='#'>Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/stocks" routerLinkActive="active" href='#'>Stock</a>
+            <a class="nav-link" routerLink="/stocks" *ngIf="checkAccount()" routerLinkActive="active" href='#'>Stock</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="logout()" routerLinkActive="active" href='#'>Logout</a>
           </li>
+
         </ul>
       </div>
     </div>

@@ -64,11 +64,11 @@ justify-items: center;
 
 hr{
     width: 100%;
-    margin: auto;
-   // margin-top: 5%;
-    //margin-bottom: 5%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    //margin: auto;
+   margin-top: 1rem;
+    margin-bottom: 1rem;
+    // padding-top: 1rem;
+    // padding-bottom: 1rem;
     border-color: rgb(0, 0, 0);
 }
 
@@ -77,5 +77,10 @@ hr{
     justify-items: center;
     display: flex;
     gap: 2rem;
-    padding-top: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.promo{
+    display: flex;
+    justify-content: space-between;
 }

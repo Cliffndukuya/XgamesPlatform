@@ -14,6 +14,8 @@ router.post('/login',register.login);
 
 router.post('/register',register.register);
 
+router.patch('/update/:user_id',register.updateUser);
+
 router.post('/addPost',posts.addPost);
 
 router.get('/getPosts',posts.getPosts);

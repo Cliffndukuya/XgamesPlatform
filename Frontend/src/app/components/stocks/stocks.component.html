@@ -4,8 +4,8 @@
 <div class="container-fluid">
 
 
-<!-- Button trigger modal -->Add more below
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<!-- Button trigger modal -->Want to add more to your stock!
+<button type="button" style="margin-top:1rem;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Add Poduct
   </button>
   
@@ -112,10 +112,11 @@
     </div> -->
 
 
-    <div class="stox">
-        <div class="row row-cols-2 row-cols-md-3 g-4">
-            <div class="col" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <div class="card" style="width: 20rem; justify-content: space-between; margin-top: 2rem;" *ngFor=" let post of posts" >
+ 
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 justify-content-center"r>
+            <div class="col mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+            style="width: 20rem; justify-content: space-between; margin-top: 2rem;" *ngFor=" let post of posts" >
+              <div class="card" >
                 <div class="card-header">
                     {{post.post_title}}
                 </div>
@@ -130,7 +131,7 @@
             </div>
             
         </div>
-    </div>
+
    
        
 </div>

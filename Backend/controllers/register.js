@@ -108,11 +108,11 @@ exports.getOneUser = (req, res) => {
 exports.updateUser = async (req, res)=>{
    
     const user_id = req.params.user_id;
-    const { password ,name ,surname} = req.body;
+    const { password ,user_name ,user_lastname} = req.body;
   
     db.query(
-      'UPDATE users SET password = $1 ,name = $2, surname = $3  WHERE user_id = $4',
-        [password ,name ,surname , user_id],
+      'UPDATE users SET password = $1 , user_name = $2, user_lastname = $3  WHERE user_id = $4',
+        [password ,user_name ,user_lastname  , user_id],
        (error,results) => {
         if (error) {
             res.status(400).json({message:'Query failed'});

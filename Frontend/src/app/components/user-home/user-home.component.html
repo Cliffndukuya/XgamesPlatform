@@ -10,10 +10,19 @@
             <img src="https://cdn-icons-png.flaticon.com/512/1/1443.png" alt="">
             Playstation
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <div class="card h-100">
-                <img src="https://iconarchive.com/download/i1878/3xhumed/mega-games-pack-39/Call-of-Duty-World-at-War-10.ico" class="card-img-top" alt="...">                
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 justify-content-center"r>
+          <div class="col mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+          style="width: 20rem; justify-content: space-between; margin-top: 2rem;" *ngFor=" let post of posts" >
+            <div class="card" >
+                <div class="card-header">
+                  {{post.post_title}}
+               </div>
+               <div class="card-body">  
+                <img src="{{post.post_image}}" class="card-img-top" alt="...">   
+               </div>   
+               <div class="card-footer">
+                {{post.post_price}}          
+                </div>            
               </div>
             </div>
             
@@ -27,33 +36,28 @@
             <img src="https://cdn-icons-png.flaticon.com/512/732/732260.png" alt="">
             Xbox
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-
-            <div class="col" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <div class="card h-100">
-                <img src="https://iconarchive.com/download/i1878/3xhumed/mega-games-pack-39/Call-of-Duty-World-at-War-10.ico" class="card-img-top" alt="...">                
-              </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 justify-content-center"r>
+          <div class="col mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+          style="width: 20rem; justify-content: space-between; margin-top: 2rem;" *ngFor=" let post of posts" >
+            <div class="card" >
+              <div class="card-header">
+                {{post.post_title}}
+             </div>
+             <div class="card-body">  
+              <img src="{{post.post_image}}" class="card-img-top" alt="...">   
+             </div>   
+             <div class="card-footer">
+              {{post.post_price}}          
+              </div>            
             </div>
-
-            <div class="col">
-              <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-              </div>
-            </div>
-
           </div>
+          
+      </div>
     </div>
 
     <hr class="line">
 
-    <div class="merch">
+    <div class="merch" style="margin-bottom: 2rem;">
         <div class="mclogo">
             <img src="https://cdn-icons-png.flaticon.com/512/3834/3834131.png" alt="">
             Merchandise
@@ -68,7 +72,7 @@
               <div class="card h-100">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">{{postTitle}}</h5>
                   <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                 </div>
                 <div class="card-footer">
@@ -78,7 +82,7 @@
             </div>
           </div>
     </div>
-    <hr class="line">
+    <!-- <hr class="line"> -->
 
 
               <!-- Modal -->
@@ -96,12 +100,16 @@
                         Description:
                     </div>
                     <div class="modal-footer">
-                        <div class="counter" >
-                            <button class="btnn" >+</button>
-                            <div class="countt" >2</div>
+                        <div class="counter"[formGroup]="buyForm" >
+                          
+                            <button class="btnn" onclick="+1">+</button>
+                            
+                            <input type="number" class="countt" formControlName="num">
+
                             <button class="btnn" >-</button>
+                          
                         </div>
-                     <button type="button" class="btn btn-primary">Buy</button>
+                     <button type="button"  class="btn btn-primary">Buy</button>
                     </div>
                 </div>
                 </div>
