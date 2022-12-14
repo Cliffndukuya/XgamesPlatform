@@ -8,7 +8,7 @@
 <button type="button" style="margin-top:1rem;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Add Poduct
   </button>
-  
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -20,68 +20,68 @@
         <div class="modal-body">
             <form [formGroup]="addForm" (ngSubmit)="onSubmit(addForm)">
                 <div class="postTit">
-                 
-                  Title 
+
+                  Title
                   <div class="postTitle">
                           <div class="titleInp"> <input type="text"
-                           class="form-control" 
-                           id="postTitle" 
+                           class="form-control"
+                           id="postTitle"
                            formControlName="title" >
                           </div>
 
                   </div>
-             
+
                </div>
-                 
+
                <div class="postPrice">
-           
-                  Price 
+
+                  Price
                       <div class="priceInp"> <input type="number"
                           class="form-control"
                           id="postPrice"
                           formControlName="price">
-                         
-                      </div>  
-                  
+
+                      </div>
+
               </div>
-           
+
               <div class="descrTitl">
-                 
-                      Description 
-                      <div class="descrInf"> 
-                          
+
+                      Description
+                      <div class="descrInf">
+
                           <textarea name="postDescription"
-                           id="postDescription" 
+                           id="postDescription"
                            class="form-control"
                            formControlName="desc"
                            cols="30" rows="10" minlength="10" required > </textarea>
                       </div>
-      
+
               </div>
                <!-- Post Inputs-->
                <div class="imageLink">
-           
+
                 Image Link
                     <div class="priceInp"> <input type="text"
                         class="form-control"
                         id="image"
                         formControlName="image">
 
-                    </div>  
+                    </div>
 
                     <div class="quantity">
-           
+
                         Quantity
                             <div class="quant"> <input type="number"
                                 class="form-control"
                                 id="quantity"
                                 formControlName="quantity">
-        
-                            </div> 
+
+                            </div>
                     </div>
             </div>
-      
-      
+
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 <button type="submit" class="btn btn-secondary" [disabled]="addForm.invalid">Post</button>
@@ -92,14 +92,14 @@
       </div>
     </div>
   </div>
-  
+
 
     <!-- <div class="stocklf" row row-cols-1 row-cols-md-3 g-4 *ngFor=" let post of posts">
         <div class="col" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         <div class="card" style="width: 20rem;" >
             <img src="{{post.post_image}}" class="card-img-top" >
             <div class="card-body">
-                
+
             {{post.post_title}}
             {{post.post_price}}
             </div>
@@ -112,33 +112,32 @@
     </div> -->
 
 
- 
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 justify-content-center"r>
-            <div class="col mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+            <div class="col mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
             style="width: 20rem; justify-content: space-between; margin-top: 2rem;" *ngFor=" let post of posts" >
               <div class="card" >
                 <div class="card-header">
                     {{post.post_title}}
                 </div>
-                <div class="card-body">               
-                <img src="{{post.post_image}}" class="card-img-top" alt="...">      
-                </div>  
+                <div class="card-body">
+                <img src="{{post.post_image}}" class="card-img-top" alt="...">
+                </div>
                 <div class="card-footer">
                     Quantity: {{post.post_quantity}} <br>
                     {{post.post_price}}
-                </div>        
+                </div>
               </div>
             </div>
-            
+
         </div>
 
-   
-       
+
+
 </div>
-   
-   
-   
-   
-   
-   
-      
+
+
+
+
+
+
